@@ -1,0 +1,54 @@
+﻿<Window x:Class="Colors.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Colors"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <SolidColorBrush x:Key="MySolidOrangeBursh" Color="Orange"/>
+        <SolidColorBrush x:Key="MySolidWhiteBursh" Color="White"/>
+        <LinearGradientBrush x:Key="MyLinearBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="#FFEF0909" Offset="1"/>
+        </LinearGradientBrush>
+        <RadialGradientBrush x:Key="MyRadialBrush">
+            <GradientStop Color="White"/>
+            <GradientStop Color="#FFF502D2" Offset="1"/>
+        </RadialGradientBrush>
+    </Window.Resources>
+    <Grid Background="DarkCyan">
+        <Button  Content="ButtonOne"
+                 FontSize="32"
+                 Height="150" Width="200"
+                 BorderThickness="5"
+                 Margin="532 51 61.333 219.667"
+                 Background="{DynamicResource MySolidOrangeBursh}" 
+                 Foreground="{DynamicResource MySolidWhiteBursh}" 
+                 BorderBrush="{DynamicResource MySolidWhiteBursh}">
+        </Button>
+        <Button  Content="ButtonTwo"
+                 FontSize="32"
+                 HorizontalAlignment="Left"
+                 Height="150" Width="200"
+                 VerticalAlignment="Top"
+                 Margin="532 244 0 0 "
+                 Background="{DynamicResource MyLinearBrush}"
+                 Foreground="{DynamicResource MySolidWhiteBursh}" 
+                 BorderBrush="{DynamicResource MySolidWhiteBursh}">
+        </Button>
+        <Button  Content="ButtonTwo"
+                 FontSize="32"
+                 HorizontalAlignment="Left"
+                 Height="150" Width="200"
+                 VerticalAlignment="Top"
+                 BorderThickness="5"
+                 Margin="298 244 0 0" 
+                 Background="{DynamicResource MyRadialBrush}"
+                 Foreground="{DynamicResource MySolidWhiteBursh}" 
+                 BorderBrush="{DynamicResource MySolidWhiteBursh}">
+        </Button>
+
+    </Grid>
+</Window>

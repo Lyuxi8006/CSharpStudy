@@ -5,7 +5,11 @@ VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{B16814A7-DE86-4752-8253-3F7E8D1E666C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{8B5421C9-82EB-460B-89FC-68AC727ADFD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{8B5421C9-82EB-460B-89FC-68AC727ADFD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp2", "WpfApp2\WpfApp2.csproj", "{F35C1B1E-AB09-4201-B480-0FB52414E581}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colors", "Colors\Colors.csproj", "{33FA5A97-B037-4E16-B2A1-007BF0DA14CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{8B5421C9-82EB-460B-89FC-68AC727ADFD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B5421C9-82EB-460B-89FC-68AC727ADFD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B5421C9-82EB-460B-89FC-68AC727ADFD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F35C1B1E-AB09-4201-B480-0FB52414E581}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F35C1B1E-AB09-4201-B480-0FB52414E581}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F35C1B1E-AB09-4201-B480-0FB52414E581}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F35C1B1E-AB09-4201-B480-0FB52414E581}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33FA5A97-B037-4E16-B2A1-007BF0DA14CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33FA5A97-B037-4E16-B2A1-007BF0DA14CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33FA5A97-B037-4E16-B2A1-007BF0DA14CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33FA5A97-B037-4E16-B2A1-007BF0DA14CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
