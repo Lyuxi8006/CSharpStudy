@@ -11,9 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp2", "WpfApp2\WpfApp2.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Colors", "Colors\Colors.csproj", "{33FA5A97-B037-4E16-B2A1-007BF0DA14CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBinding", "DataBinding\DataBinding.csproj", "{D66BC776-6946-43E7-A5EC-A018A17CF73D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataBinding", "DataBinding\DataBinding.csproj", "{D66BC776-6946-43E7-A5EC-A018A17CF73D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataContext", "DataContext\DataContext.csproj", "{D9B410A3-A100-46D9-B409-8253BA9585A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataContext", "DataContext\DataContext.csproj", "{D9B410A3-A100-46D9-B409-8253BA9585A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBinding.DataContextSample", "DataBinding.DataContextSample\DataBinding.DataContextSample.csproj", "{649E6FD9-F305-4A5F-83D6-C3B03F7C1F5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterDetailDemo", "MasterDetailDemo\MasterDetailDemo.csproj", "{46A14BD2-4C38-4DC8-B2FD-5A4A533CBA62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{D9B410A3-A100-46D9-B409-8253BA9585A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9B410A3-A100-46D9-B409-8253BA9585A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9B410A3-A100-46D9-B409-8253BA9585A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{649E6FD9-F305-4A5F-83D6-C3B03F7C1F5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{649E6FD9-F305-4A5F-83D6-C3B03F7C1F5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{649E6FD9-F305-4A5F-83D6-C3B03F7C1F5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{649E6FD9-F305-4A5F-83D6-C3B03F7C1F5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46A14BD2-4C38-4DC8-B2FD-5A4A533CBA62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46A14BD2-4C38-4DC8-B2FD-5A4A533CBA62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46A14BD2-4C38-4DC8-B2FD-5A4A533CBA62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46A14BD2-4C38-4DC8-B2FD-5A4A533CBA62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
