@@ -25,6 +25,7 @@
             <TextBlock Text="{Binding DT, StringFormat={}{0:dddd MMMM dd yy}}"/>
             <TextBlock Text="{Binding DT, StringFormat={}{0:yyyy-MM-dd'T'hh:mm:ss z}}"/>
             <TextBlock Text="{Binding DT, StringFormat={}{0:'DATE :' MM/dd/yyyy}}"/>
+            <TextBlock Text="{Binding DT, StringFormat={}{0:F}}"/>
         </StackPanel>
         <StackPanel Grid.Column="1">
             <TextBlock Text="{Binding DT, StringFormat={}{0:h:m tt}}"/>
