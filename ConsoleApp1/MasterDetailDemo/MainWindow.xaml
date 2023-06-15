@@ -1,0 +1,43 @@
+﻿<Window x:Class="MasterDetailDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MasterDetailDemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <local:Cars />
+    </Window.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="1.5*"/>
+        </Grid.ColumnDefinitions>
+        <ListView x:Name="LVW_CARS"  FontSize="30" ItemsSource="{Binding CARLIST}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding MODEL}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+ 
+        </ListView>
+        <Grid Grid.Column="1" DataContext="{Binding ElementName=LVW_CARS, Path=SelectedItem}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Image Grid.Column="1" Source="{Binding PHOTO}"/>
+            <Label Grid.Row="1" Content="Make : " FontSize="32" HorizontalAlignment="Right"/>
+            <Label Grid.Row="2" Content="Model : " FontSize="32" HorizontalAlignment="Right"/>
+            <TextBlock Grid.Row="1" Grid.Column="1" FontSize="32" Text="{Binding MAKE}"/>
+            <TextBlock Grid.Row="2" Grid.Column="1" FontSize="32" Text="{Binding MODEL}"/> 
+        </Grid>
+
+    </Grid>
+</Window>
