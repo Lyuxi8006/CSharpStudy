@@ -1,0 +1,38 @@
+﻿<Window x:Class="WPF_DateTime_Demo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_DateTime_Demo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <local:MydatetimeClass/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <TextBlock Text="{Binding DT}"/>
+            <TextBlock Text="{Binding DT, StringFormat={}{0:M/d/yy}}"/>
+            <TextBlock Text="{Binding DT, StringFormat={}{0:MM/dd/yyyy}}"/>
+            <TextBlock Text="{Binding DT, StringFormat={}{0:M-dd-yyyy}}"/>
+            <TextBlock Text="{Binding DT, StringFormat={}{0:dd/MM/yyyy}}"/>
+            <TextBlock Text="{Binding DT, StringFormat={}{0:dd.MM.yyyy}}"/>
+            <TextBlock Text="{Binding DT, StringFormat={}{0:MMMM dd yy}}"/>
+            <TextBlock Text="{Binding DT, StringFormat={}{0:dddd MMMM dd yy}}"/>
+            <TextBlock Text="{Binding DT, StringFormat={}{0:yyyy-MM-dd'T'hh:mm:ss z}}"/>
+            <TextBlock Text="{Binding DT, StringFormat={}{0:'DATE :' MM/dd/yyyy}}"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <TextBlock Text="{Binding DT, StringFormat={}{0:h:m tt}}"/>
+            <TextBlock Text="{Binding DT, StringFormat={}{0:hh:mm:ss tt}}"/>
+            <TextBlock Text="{Binding DT, StringFormat={}{0:hh:mm:ss tt zzzz}}"/>
+            <TextBlock Text="{Binding DT, StringFormat={}{0:hh:mm:ss tt K}}"/>
+            <TextBlock Text="{Binding DT, StringFormat={}{0:HH:mm:ss tt}}"/>
+            <TextBlock Text="{Binding DT, StringFormat={}{0:'Time:'hh:mm:ss tt}}"/>
+        </StackPanel>
+    </Grid>
+</Window>
