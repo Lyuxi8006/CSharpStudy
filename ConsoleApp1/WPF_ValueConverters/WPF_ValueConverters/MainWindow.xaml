@@ -1,0 +1,56 @@
+﻿<Window x:Class="WPF_ValueConverters.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_ValueConverters"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="768" Width="1024">
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="50"/>
+        </Style>
+        <local:IntToStringConverter x:Key="Int2OddEvenConv"/>
+        <local:BoolToStringConverter x:Key="Bool2StringConv"/>
+        <local:GenderToColorConverter x:Key="Gender2ColorConv"/>
+        <local:CenderToImageCVonverter x:Key="Cender2ImageConv"/>
+    </Window.Resources>
+    <Grid>
+        <StackPanel>
+            <Label Content="1.Int to string vonversion" HorizontalAlignment="Left"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox Margin="10" x:Name="txtODDEVEN" HorizontalAlignment="Stretch" />
+                <Label  Grid.Column="1" HorizontalAlignment="Left" Content="{Binding ElementName=txtODDEVEN, Path=Text, Converter=
+                    {StaticResource Int2OddEvenConv}}"/>
+            </Grid>
+            <Label Content="2.bool to string vonversion" HorizontalAlignment="Left"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <CheckBox Name="checkYesNo" HorizontalAlignment="Left" Content="Yes/No" FontSize="50"/>
+                <Label Grid.Column="1" HorizontalAlignment="Left" Content="{Binding ElementName=checkYesNo, Path=IsChecked,
+                    Converter={StaticResource Bool2StringConv}}"/>
+            </Grid>
+            <Label Content="3.string to color vonversion" HorizontalAlignment="Left"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <ComboBox x:Name="comboboxGender" FontSize="50">
+                    <ComboBoxItem>M</ComboBoxItem>
+                    <ComboBoxItem>F</ComboBoxItem>
+                </ComboBox>
+                <Label Grid.Column="1" HorizontalAlignment="Stretch" Background="{Binding ElementName=comboboxGender,
+                    Path=Text, Converter={StaticResource Gender2ColorConv}}"/>
+            </Grid>
+            <Image Height="200" Width="200" Source="{Binding ElementName=comboboxGender, Path=Text, Converter={StaticResource Cender2ImageConv}}"/>
+        </StackPanel>
+    </Grid>
+</Window>
