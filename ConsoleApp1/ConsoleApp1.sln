@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_ValueConverters", "WPF_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_MultiValueConverters", "WPF_MultiValueConverters\WPF_MultiValueConverters.csproj", "{C42D7025-0B7B-4A95-BD4E-ED25F75FD4F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_XMLDataProvider_Demo", "WPF_XMLDataProvider_Demo\WPF_XMLDataProvider_Demo.csproj", "{3D0D399C-33D6-4D1E-899B-6E23433E9FD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_XMLDataProvider_Demo", "WPF_XMLDataProvider_Demo\WPF_XMLDataProvider_Demo.csproj", "{3D0D399C-33D6-4D1E-899B-6E23433E9FD9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Triggers", "Triggers\Triggers\Triggers.csproj", "{7AAC8AE3-BE9B-4093-B0F9-87379F6D9561}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{3D0D399C-33D6-4D1E-899B-6E23433E9FD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D0D399C-33D6-4D1E-899B-6E23433E9FD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D0D399C-33D6-4D1E-899B-6E23433E9FD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AAC8AE3-BE9B-4093-B0F9-87379F6D9561}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AAC8AE3-BE9B-4093-B0F9-87379F6D9561}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AAC8AE3-BE9B-4093-B0F9-87379F6D9561}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AAC8AE3-BE9B-4093-B0F9-87379F6D9561}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
