@@ -31,9 +31,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_XMLDataProvider_Demo", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Triggers", "Triggers\Triggers\Triggers.csproj", "{7AAC8AE3-BE9B-4093-B0F9-87379F6D9561}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoupleAnimation", "DoupleAnimation\DoupleAnimation.csproj", "{194E55D6-F6B9-4806-B268-E020330B92E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoupleAnimation", "DoupleAnimation\DoupleAnimation.csproj", "{194E55D6-F6B9-4806-B268-E020330B92E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_ToastNotificationDemo", "WPF_ToastNotificationDemo\WPF_ToastNotificationDemo.csproj", "{660FF05B-5546-41BE-A3DD-BC85F3D27AF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_ToastNotificationDemo", "WPF_ToastNotificationDemo\WPF_ToastNotificationDemo.csproj", "{660FF05B-5546-41BE-A3DD-BC85F3D27AF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_MultiLingual_AppDemo", "WPF_MultiLingual_AppDemo\WPF_MultiLingual_AppDemo.csproj", "{47F3AF15-DEC1-440A-BEFF-D23D8B55E33C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{660FF05B-5546-41BE-A3DD-BC85F3D27AF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{660FF05B-5546-41BE-A3DD-BC85F3D27AF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{660FF05B-5546-41BE-A3DD-BC85F3D27AF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47F3AF15-DEC1-440A-BEFF-D23D8B55E33C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47F3AF15-DEC1-440A-BEFF-D23D8B55E33C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47F3AF15-DEC1-440A-BEFF-D23D8B55E33C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47F3AF15-DEC1-440A-BEFF-D23D8B55E33C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

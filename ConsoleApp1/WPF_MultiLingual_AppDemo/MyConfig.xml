@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Roo>
+  <Languages activeLangId="2">
+    <Language id="1">
+      <LblText>Please Entry Your Name</LblText>
+      <BtnText>Click</BtnText>
+      <Flag>/Assets/English.jpg</Flag>
+      <LangName>Englist</LangName>
+    </Language>
+    <Language id="2">
+      <LblText>输入你的名字</LblText>
+      <BtnText>点击</BtnText>
+      <Flag>/Assets/Chinese.jpg</Flag>
+      <LangName>中文</LangName>
+    </Language>
+    <Language id="3">
+      <LblText>お名前を入力してください</LblText>
+      <BtnText>クリック</BtnText>
+      <Flag>/Assets/Japanese.jpg</Flag>
+      <LangName>日本語</LangName>
+    </Language>
+    <Language id="4">
+      <LblText>Gib deinen Namen ein</LblText>
+      <BtnText>Klicken</BtnText>
+      <Flag>/Assets/German.jpg</Flag>
+      <LangName>Deutsche</LangName>
+    </Language>
+  </Languages>
+  <Colors>
+    <Background>#aa5bd8</Background>
+  </Colors>
+</Roo>
