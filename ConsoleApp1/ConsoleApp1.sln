@@ -35,7 +35,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoupleAnimation", "DoupleAn
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_ToastNotificationDemo", "WPF_ToastNotificationDemo\WPF_ToastNotificationDemo.csproj", "{660FF05B-5546-41BE-A3DD-BC85F3D27AF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_MultiLingual_AppDemo", "WPF_MultiLingual_AppDemo\WPF_MultiLingual_AppDemo.csproj", "{47F3AF15-DEC1-440A-BEFF-D23D8B55E33C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_MultiLingual_AppDemo", "WPF_MultiLingual_AppDemo\WPF_MultiLingual_AppDemo.csproj", "{47F3AF15-DEC1-440A-BEFF-D23D8B55E33C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_ObjectDataProvider", "WPF_ObjectDataProvider\WPF_ObjectDataProvider.csproj", "{45E2A3E0-9543-4DAA-90B7-E32F416806C0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieRatings", "MovieRatings\MovieRatings.csproj", "{6787D9B1-6415-4DCC-8023-87D99AC6D7EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarChartDemo", "BarChartDemo\BarChartDemo.csproj", "{265F4123-A55F-456D-A85E-9ABDC1094610}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_Layout_Grid", "WPF_Layout_Grid\WPF_Layout_Grid.csproj", "{83E285A8-D69D-4950-9550-4228B6F61763}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +119,22 @@ Global
 		{47F3AF15-DEC1-440A-BEFF-D23D8B55E33C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47F3AF15-DEC1-440A-BEFF-D23D8B55E33C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47F3AF15-DEC1-440A-BEFF-D23D8B55E33C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45E2A3E0-9543-4DAA-90B7-E32F416806C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45E2A3E0-9543-4DAA-90B7-E32F416806C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45E2A3E0-9543-4DAA-90B7-E32F416806C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45E2A3E0-9543-4DAA-90B7-E32F416806C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6787D9B1-6415-4DCC-8023-87D99AC6D7EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6787D9B1-6415-4DCC-8023-87D99AC6D7EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6787D9B1-6415-4DCC-8023-87D99AC6D7EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6787D9B1-6415-4DCC-8023-87D99AC6D7EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{265F4123-A55F-456D-A85E-9ABDC1094610}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{265F4123-A55F-456D-A85E-9ABDC1094610}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{265F4123-A55F-456D-A85E-9ABDC1094610}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{265F4123-A55F-456D-A85E-9ABDC1094610}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83E285A8-D69D-4950-9550-4228B6F61763}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83E285A8-D69D-4950-9550-4228B6F61763}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83E285A8-D69D-4950-9550-4228B6F61763}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83E285A8-D69D-4950-9550-4228B6F61763}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

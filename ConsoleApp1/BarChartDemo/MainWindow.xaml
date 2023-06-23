@@ -1,0 +1,47 @@
+﻿<Window x:Class="BarChartDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BarChartDemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="400">
+    <Window.DataContext>
+        <local:Courses/>
+    </Window.DataContext>
+    <StackPanel>
+        <ListBox FontSize="30" ItemsSource="{Binding CourseList}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Rectangle Height="30" Width="{Binding Grade}">
+                        <Rectangle.Style>
+                            <Style TargetType="Rectangle">
+                                <Setter Property="Fill" Value="Black"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Name}" Value="Math">
+                                        <Setter Property="Fill" Value="Blue"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Name}" Value="Science">
+                                        <Setter Property="Fill" Value="Orange"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Name}" Value="English">
+                                        <Setter Property="Fill" Value="Red"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Name}" Value="Art">
+                                        <Setter Property="Fill" Value="Green"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Rectangle.Style>
+                    </Rectangle>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text=" Math" FontSize="30" Foreground="Blue"/>
+            <TextBlock Text=" Science" FontSize="30" Foreground="Orange"/>
+            <TextBlock Text=" English" FontSize="30" Foreground="Red"/>
+            <TextBlock Text=" Art" FontSize="30" Foreground="Green"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

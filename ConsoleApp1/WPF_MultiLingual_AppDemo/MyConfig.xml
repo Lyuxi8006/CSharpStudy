@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roo>
-  <Languages activeLangId="2">
+  <Languages activeLangId="1">
     <Language id="1">
       <LblText>Please Entry Your Name</LblText>
       <BtnText>Click</BtnText>
