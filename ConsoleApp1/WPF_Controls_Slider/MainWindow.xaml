@@ -1,0 +1,28 @@
+﻿<Window x:Class="WPF_Controls_Slider.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Controls_Slider"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Slider x:Name="RedSlider"  Margin="10" Background="Red" Maximum="255" Cursor="Hand" SmallChange="1" Height="30" LargeChange="10" TickFrequency="10" TickPlacement="Both" Value="-1" IsSnapToTickEnabled="True"
+                    ValueChanged="RedSlider_ValueChanged"/>
+            <TextBlock Text="{Binding ElementName=RedSlider, Path=Value}" FontSize="33"/>
+            <Slider x:Name="GreendSlider"  Margin="10" Background="Green" Maximum="255" Cursor="Hand" SmallChange="1" Height="30" LargeChange="10" TickFrequency="10" TickPlacement="TopLeft" Value="-1" IsSnapToTickEnabled="True"
+                    ValueChanged="RedSlider_ValueChanged"/>
+            <TextBlock Text="{Binding ElementName=GreendSlider, Path=Value}" FontSize="33"/>
+            <Slider x:Name="BlueSlider"  Margin="10" Background="Blue" Maximum="255" Cursor="Hand" SmallChange="1" Height="30" LargeChange="10" TickFrequency="10" TickPlacement="TopLeft" Value="-1" IsSnapToTickEnabled="True"
+                    ValueChanged="RedSlider_ValueChanged"/>
+            <TextBlock Text="{Binding ElementName=BlueSlider, Path=Value}" FontSize="33"/>
+            <TextBox Text="{Binding ElementName=MyEllipse, Path=Fill}" FontSize="33" />
+        </StackPanel>
+        <Ellipse x:Name="MyEllipse" Grid.Column="1"/>
+    </Grid>
+</Window>

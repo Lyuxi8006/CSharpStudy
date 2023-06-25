@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{B16814A7-DE86-4752-8253-3F7E8D1E666C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreadSample", "ConsoleApp1\ThreadSample.csproj", "{B16814A7-DE86-4752-8253-3F7E8D1E666C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{8B5421C9-82EB-460B-89FC-68AC727ADFD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CircleProgress", "WpfApp1\CircleProgress.csproj", "{8B5421C9-82EB-460B-89FC-68AC727ADFD9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp2", "WpfApp2\WpfApp2.csproj", "{F35C1B1E-AB09-4201-B480-0FB52414E581}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResourceDictionary", "WpfApp2\ResourceDictionary.csproj", "{F35C1B1E-AB09-4201-B480-0FB52414E581}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Colors", "Colors\Colors.csproj", "{33FA5A97-B037-4E16-B2A1-007BF0DA14CA}"
 EndProject
@@ -41,9 +41,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_ObjectDataProvider", "W
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieRatings", "MovieRatings\MovieRatings.csproj", "{6787D9B1-6415-4DCC-8023-87D99AC6D7EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarChartDemo", "BarChartDemo\BarChartDemo.csproj", "{265F4123-A55F-456D-A85E-9ABDC1094610}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BarChartDemo", "BarChartDemo\BarChartDemo.csproj", "{265F4123-A55F-456D-A85E-9ABDC1094610}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_Layout_Grid", "WPF_Layout_Grid\WPF_Layout_Grid.csproj", "{83E285A8-D69D-4950-9550-4228B6F61763}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_Layout_Grid", "WPF_Layout_Grid\WPF_Layout_Grid.csproj", "{83E285A8-D69D-4950-9550-4228B6F61763}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_Layout_StackPanel", "WPF_Layout_StackPanel\WPF_Layout_StackPanel.csproj", "{50B138F0-C481-44FD-842D-62260AC503BF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_Layout_WrapPanel", "WPF_Layout_WrapPanel\WPF_Layout_WrapPanel.csproj", "{4F545B7A-CAC5-4F1C-B42D-0E1B8B2D736D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_Layout_DockPanel", "WPF_Layout_DockPanel\WPF_Layout_DockPanel.csproj", "{91B0067A-38CE-4DF2-97BE-4D434977FA72}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_Layout_Canvas", "WPF_Layout_Canvas\WPF_Layout_Canvas.csproj", "{823C1125-ADD3-4DEF-A6F3-48D7E384B4CA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_Controls_GroupBox", "WPF_Controls_GroupBox\WPF_Controls_GroupBox.csproj", "{0E1FED4E-3A70-4224-AF26-A797F207641D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_Controls_Slider", "WPF_Controls_Slider\WPF_Controls_Slider.csproj", "{57EA36AC-EED4-4FB7-BFB9-759DD3CE9B42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -135,6 +147,30 @@ Global
 		{83E285A8-D69D-4950-9550-4228B6F61763}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83E285A8-D69D-4950-9550-4228B6F61763}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83E285A8-D69D-4950-9550-4228B6F61763}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50B138F0-C481-44FD-842D-62260AC503BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50B138F0-C481-44FD-842D-62260AC503BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50B138F0-C481-44FD-842D-62260AC503BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50B138F0-C481-44FD-842D-62260AC503BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F545B7A-CAC5-4F1C-B42D-0E1B8B2D736D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F545B7A-CAC5-4F1C-B42D-0E1B8B2D736D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F545B7A-CAC5-4F1C-B42D-0E1B8B2D736D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F545B7A-CAC5-4F1C-B42D-0E1B8B2D736D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91B0067A-38CE-4DF2-97BE-4D434977FA72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91B0067A-38CE-4DF2-97BE-4D434977FA72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91B0067A-38CE-4DF2-97BE-4D434977FA72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91B0067A-38CE-4DF2-97BE-4D434977FA72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{823C1125-ADD3-4DEF-A6F3-48D7E384B4CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{823C1125-ADD3-4DEF-A6F3-48D7E384B4CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{823C1125-ADD3-4DEF-A6F3-48D7E384B4CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{823C1125-ADD3-4DEF-A6F3-48D7E384B4CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E1FED4E-3A70-4224-AF26-A797F207641D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E1FED4E-3A70-4224-AF26-A797F207641D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E1FED4E-3A70-4224-AF26-A797F207641D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E1FED4E-3A70-4224-AF26-A797F207641D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57EA36AC-EED4-4FB7-BFB9-759DD3CE9B42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57EA36AC-EED4-4FB7-BFB9-759DD3CE9B42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57EA36AC-EED4-4FB7-BFB9-759DD3CE9B42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57EA36AC-EED4-4FB7-BFB9-759DD3CE9B42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
