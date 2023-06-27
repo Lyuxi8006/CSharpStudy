@@ -1,0 +1,48 @@
+﻿<Window x:Class="WPF_Calendar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:WPF_Calendar"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Calendar x:Name="Calendar1" DisplayMode="Month" DisplayDateStart="1/1/2020" 
+                      DisplayDateEnd="12/31/2020" 
+                      IsTodayHighlighted="True"
+                      SelectionMode="SingleDate">
+                <Calendar.BlackoutDates>
+                    <CalendarDateRange Start="7/24/2020" End="7/24/2020"/>
+                    <CalendarDateRange Start="7/17/2020" End="7/18/2020"/> 
+                </Calendar.BlackoutDates>
+                <Calendar.SelectedDate>
+                    <System:DateTime>7/7/2020</System:DateTime>
+                </Calendar.SelectedDate>
+            </Calendar>
+            <TextBlock Text="{Binding ElementName=Calendar1, Path=SelectedDate}" FontSize="24"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <Calendar x:Name="Calender2" SelectionMode="SingleDate">
+                
+            </Calendar>
+            <ListBox ItemsSource="{Binding ElementName=Calender2, Path=SelectedDates}" />
+        </StackPanel>
+        <StackPanel Grid.Column="2">
+            <Calendar x:Name="Calendar3" SelectionMode="MultipleRange"
+                      Loaded="C3_Loaded"
+                      FirstDayOfWeek="Monday">
+            </Calendar>
+            <ListBox ItemsSource="{Binding ElementName=Calendar3, Path=SelectedDates}"/>
+        </StackPanel>
+
+
+
+    </Grid>
+</Window>

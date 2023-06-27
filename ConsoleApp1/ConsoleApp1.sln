@@ -57,6 +57,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_Controls_GroupBox", "WP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_Controls_Slider", "WPF_Controls_Slider\WPF_Controls_Slider.csproj", "{57EA36AC-EED4-4FB7-BFB9-759DD3CE9B42}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_ScrollViewer", "WPF_ScrollViewer\WPF_ScrollViewer.csproj", "{D7105DF5-217F-47A0-A541-431CC34BEBF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_CalcDemo", "WPF_CalcDemo\WPF_CalcDemo.csproj", "{DB02F88C-BABD-44A9-A4F1-AC98F31D0D33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_Calendar", "WPF_Calendar\WPF_Calendar.csproj", "{683999DA-CB2A-4F3C-A73F-03421C45E92F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -171,6 +177,18 @@ Global
 		{57EA36AC-EED4-4FB7-BFB9-759DD3CE9B42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57EA36AC-EED4-4FB7-BFB9-759DD3CE9B42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57EA36AC-EED4-4FB7-BFB9-759DD3CE9B42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7105DF5-217F-47A0-A541-431CC34BEBF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7105DF5-217F-47A0-A541-431CC34BEBF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7105DF5-217F-47A0-A541-431CC34BEBF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7105DF5-217F-47A0-A541-431CC34BEBF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB02F88C-BABD-44A9-A4F1-AC98F31D0D33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB02F88C-BABD-44A9-A4F1-AC98F31D0D33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB02F88C-BABD-44A9-A4F1-AC98F31D0D33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB02F88C-BABD-44A9-A4F1-AC98F31D0D33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{683999DA-CB2A-4F3C-A73F-03421C45E92F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{683999DA-CB2A-4F3C-A73F-03421C45E92F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{683999DA-CB2A-4F3C-A73F-03421C45E92F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{683999DA-CB2A-4F3C-A73F-03421C45E92F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
