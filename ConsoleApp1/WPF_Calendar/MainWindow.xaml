@@ -41,8 +41,5 @@
             </Calendar>
             <ListBox ItemsSource="{Binding ElementName=Calendar3, Path=SelectedDates}"/>
         </StackPanel>
-
-
-
     </Grid>
 </Window>
