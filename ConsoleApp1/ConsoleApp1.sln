@@ -63,9 +63,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_CalcDemo", "WPF_CalcDem
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_Calendar", "WPF_Calendar\WPF_Calendar.csproj", "{683999DA-CB2A-4F3C-A73F-03421C45E92F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_DataPicker", "WPF_DataPicker\WPF_DataPicker.csproj", "{238E10FC-A41D-4142-81FC-3EEA17879CFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_DataPicker", "WPF_DataPicker\WPF_DataPicker.csproj", "{238E10FC-A41D-4142-81FC-3EEA17879CFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_ToolTip", "WPF_ToolTip\WPF_ToolTip.csproj", "{114B2792-3889-4077-8CB1-EE9CECA1D6D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_ToolTip", "WPF_ToolTip\WPF_ToolTip.csproj", "{114B2792-3889-4077-8CB1-EE9CECA1D6D9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_ProgressBar", "WPF_ProgressBar\WPF_ProgressBar.csproj", "{A6560FCC-4FF5-4C35-BF4D-DA527CBBCFA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_StartusBar", "WPF_StartusBar\WPF_StartusBar.csproj", "{C75773B9-AF40-429B-8CD6-1B7C19B08FA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_TabControl", "WPF_TabControl\WPF_TabControl.csproj", "{85F067F1-76E4-4565-82CC-44B5E31DEB4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -201,6 +207,18 @@ Global
 		{114B2792-3889-4077-8CB1-EE9CECA1D6D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{114B2792-3889-4077-8CB1-EE9CECA1D6D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{114B2792-3889-4077-8CB1-EE9CECA1D6D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6560FCC-4FF5-4C35-BF4D-DA527CBBCFA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6560FCC-4FF5-4C35-BF4D-DA527CBBCFA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6560FCC-4FF5-4C35-BF4D-DA527CBBCFA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6560FCC-4FF5-4C35-BF4D-DA527CBBCFA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C75773B9-AF40-429B-8CD6-1B7C19B08FA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C75773B9-AF40-429B-8CD6-1B7C19B08FA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C75773B9-AF40-429B-8CD6-1B7C19B08FA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C75773B9-AF40-429B-8CD6-1B7C19B08FA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85F067F1-76E4-4565-82CC-44B5E31DEB4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85F067F1-76E4-4565-82CC-44B5E31DEB4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85F067F1-76E4-4565-82CC-44B5E31DEB4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85F067F1-76E4-4565-82CC-44B5E31DEB4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

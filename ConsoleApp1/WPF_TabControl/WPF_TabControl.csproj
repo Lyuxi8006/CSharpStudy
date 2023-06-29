@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Bread\french_bread.png" />
+    <None Remove="Assets\Bread\italian_bread.png" />
+    <None Remove="Assets\Cheese\american.png" />
+    <None Remove="Assets\Cheese\american_cheese.png" />
+    <None Remove="Assets\Cheese\swiss.png" />
+    <None Remove="Assets\Cheese\swiss_cheese.png" />
+    <None Remove="Assets\Veggies\lettuce.png" />
+    <None Remove="Assets\Veggies\potato.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Bread\french_bread.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Bread\italian_bread.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cheese\american_cheese.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cheese\swiss_cheese.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Veggies\lettuce.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Veggies\potato.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>

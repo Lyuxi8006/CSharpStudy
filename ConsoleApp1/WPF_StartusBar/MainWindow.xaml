@@ -1,0 +1,52 @@
+﻿<Window x:Class="WPF_StartusBar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_StartusBar"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" >
+    <DockPanel>
+        <StatusBar DockPanel.Dock="Bottom" FontSize="20">
+            <StatusBarItem>
+                <Button x:Name="btnPB" Content="ClickMe" Click="btnPB_Click"/>
+            </StatusBarItem>
+            <Separator/>
+            <StatusBarItem>
+                <TextBlock Text="Loading"/>
+            </StatusBarItem>
+            <Separator/>
+            <StatusBarItem>
+                <Grid>
+                    <ProgressBar x:Name="PB1" Width="300"/>
+                    <TextBlock FontSize="20" 
+                           Text="{Binding ElementName=PB1, Path=Value, StringFormat={}{0:0}%}"
+                           TextAlignment="Center" Foreground="red"/>
+                </Grid>
+            </StatusBarItem>
+            <Separator/>
+            <StatusBarItem>
+                <TextBlock x:Name="TextFN"/>
+            </StatusBarItem>
+        </StatusBar>
+        <Image x:Name="IMG"/>
+    </DockPanel>
+    <!--<Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel x:Name="SP">
+            <Grid>
+                <ProgressBar x:Name="PB1" Height="29"/>
+                <TextBlock FontSize="20" 
+                           Text="{Binding ElementName=PB1, Path=Value, StringFormat={}{0:0}%}"
+                           TextAlignment="Center" Foreground="red"
+                           FontWeight="Bold"/>
+            </Grid>
+            <Button x:Name="btnPB" Content="ClickMe" Click="btnPB_Click"/>
+            
+        </StackPanel>
+        <Image x:Name="IMG" Grid.Column="1"/>
+    </Grid>-->
+</Window>

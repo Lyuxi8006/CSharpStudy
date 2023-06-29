@@ -1,0 +1,86 @@
+﻿<Window x:Class="WPF_TabControl.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_TabControl"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="GRD">
+        <!--<TabControl>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel>
+                        <Image Source="/Assets/Bread/italian_bread.png" 
+                               Height="40"/>
+                        <TextBlock Text="Bread"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <WrapPanel>
+                    <RadioButton VerticalContentAlignment="Center">
+                        <RadioButton.Content>
+                            <StackPanel>
+                                <Image Source="/Assets/Bread/italian_bread.png" 
+                                       Height="60"/>
+                                <TextBlock Text="italian" FontSize="20"/>
+                            </StackPanel>
+                        </RadioButton.Content>
+                    </RadioButton>
+                    <RadioButton VerticalContentAlignment="Center">
+                        <RadioButton.Content>
+                            <StackPanel>
+                                <Image Source="/Assets/Bread/french_bread.png" 
+                                       Height="60"/>
+                                <TextBlock Text="italian" FontSize="20"/>
+                            </StackPanel>
+                        </RadioButton.Content>
+                    </RadioButton>
+                </WrapPanel>
+            </TabItem>
+            <TabItem Header="Cheese" >
+                <WrapPanel>
+                    <RadioButton VerticalContentAlignment="Center">
+                        <RadioButton.Content>
+                            <StackPanel>
+                                <Image Source="/Assets/Cheese/american_cheese.png" 
+                                       Height="60"/>
+                                <TextBlock Text="american" FontSize="20"/>
+                            </StackPanel>
+                        </RadioButton.Content>
+                    </RadioButton>
+                    <RadioButton VerticalContentAlignment="Center">
+                        <RadioButton.Content>
+                            <StackPanel>
+                                <Image Source="/Assets/Cheese/swiss_cheese.png" 
+                                       Height="60"/>
+                                <TextBlock Text="swiss" FontSize="20"/>
+                            </StackPanel>
+                        </RadioButton.Content>
+                    </RadioButton>
+                </WrapPanel>
+            </TabItem>
+            <TabItem Header="Viggies" >
+                <WrapPanel>
+                    <CheckBox VerticalContentAlignment="Center">
+                        <CheckBox.Content>
+                            <StackPanel>
+                                <Image Source="/Assets/Veggies/potato.png" 
+                                       Height="60"/>
+                                <TextBlock Text="potato" FontSize="20"/>
+                            </StackPanel>
+                        </CheckBox.Content>
+                    </CheckBox>
+                    <CheckBox VerticalContentAlignment="Center">
+                        <CheckBox.Content>
+                            <StackPanel>
+                                <Image Source="/Assets/Veggies/lettuce.png" 
+                                       Height="60"/>
+                                <TextBlock Text="lettuce" FontSize="20"/>
+                            </StackPanel>
+                        </CheckBox.Content>
+                    </CheckBox>
+                </WrapPanel>
+            </TabItem>
+        </TabControl>-->
+    </Grid>
+</Window>
