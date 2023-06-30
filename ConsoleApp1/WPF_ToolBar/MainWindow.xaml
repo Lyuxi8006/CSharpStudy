@@ -1,0 +1,55 @@
+﻿<Window x:Class="WPF_ToolBar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_ToolBar"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <ToolBarTray Height="80" DockPanel.Dock="Top">
+            <ToolBar Band="1" BandIndex="1">
+                <Button x:Name="btnPB" Click="btnPB_Click">
+                    <Image Source="/Assets/arrow.png" Height="30"/>
+                </Button>
+                <Button>
+                    <Image Source="/Assets/cloud.png" Height="30"/>
+                </Button>
+                <Button>
+                    <Image Source="/Assets/document.png" Height="30"/>
+                </Button>
+            </ToolBar>
+            <ToolBar Band="2" BandIndex="1">
+                <Button Click="Button_Click">
+                    <Image Source="/Assets/profolder.png" Height="30"/>
+                </Button>
+                <Button>
+                    <Image Source="/Assets/music.png" Height="30"/>
+                </Button>
+                <Button ToolBar.OverflowMode="AsNeeded">
+                    <Image Source="/Assets/search.png" Height="30"/>
+                </Button>
+            </ToolBar>
+        </ToolBarTray>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel x:Name="SP">
+                <Grid>
+                    <ProgressBar x:Name="PB1" Height="5"/>
+                    <TextBox FontSize="20" 
+                         Text="{Binding ElementName=PB1, Path=Value, 
+                    StringFormat={}{0:0}%}"
+                         TextAlignment="Center"
+                         Foreground="red"/>
+                </Grid>
+                <!--<Button x:Name="btnPB" Content="ClickMe"
+                    Click="btnPB_Click"/>-->
+                <Image x:Name="IMG"/>
+            </StackPanel>
+            <ListBox x:Name="LBX" Grid.Column="1"/>
+        </Grid>
+    </DockPanel>
+</Window>
