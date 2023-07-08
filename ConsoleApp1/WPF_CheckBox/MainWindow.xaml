@@ -1,0 +1,47 @@
+﻿<Window x:Class="WPF_CheckBox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_CheckBox"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Viewbox>
+            <CheckBox x:Name="CHX1" IsThreeState="True" Checked="CHX1_Checked" Unchecked="CHX1_Unchecked" Indeterminate="CHX1_Indeterminate">
+                <CheckBox.Style>
+                    <Style TargetType="CheckBox">
+                        <Style.Triggers>
+                            <Trigger Property="IsChecked" Value="{x:Null}">
+                                <Setter Property="Content" Value="Ignition"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter Property="Content" Value="Engine ON"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="False">
+                                <Setter Property="Content" Value="Engin OFF"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </CheckBox.Style>
+            </CheckBox>    
+        </Viewbox>
+        <Viewbox Grid.Row="1" Grid.RowSpan="2">
+            <StackPanel>
+                <CheckBox x:Name="CHX2" Content="Enable Audio" IsEnabled="False"/>
+                <CheckBox x:Name="CHX3" Content="Enable Wipers" IsEnabled="False"/>
+                <CheckBox x:Name="CHX4" Content="Enable AC" IsEnabled="False"/>
+            </StackPanel>
+        </Viewbox>
+
+    </Grid>
+</Window>
