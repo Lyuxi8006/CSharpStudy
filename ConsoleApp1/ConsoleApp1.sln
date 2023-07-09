@@ -93,7 +93,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_TextBox", "WPF_TextBox\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_Datagrid", "WPF_Datagrid\WPF_Datagrid.csproj", "{DCE94795-EB78-43FE-B9BF-72DF918538FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_CustomDataGrid", "WPF_CustomDataGrid\WPF_CustomDataGrid.csproj", "{029C9603-38B8-44E7-B73F-2CCB814B861D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_CustomDataGrid", "WPF_CustomDataGrid\WPF_CustomDataGrid.csproj", "{029C9603-38B8-44E7-B73F-2CCB814B861D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_CustomDataGridPart5", "WPF_CustomDataGridPart5\WPF_CustomDataGridPart5.csproj", "{73A8639E-32D9-43B8-AA09-69A9077B1354}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_DATAGRID7", "WPF_DATAGRID7\WPF_DATAGRID7.csproj", "{7756DF0F-775E-4CD0-A291-458ABAC2E000}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -285,6 +289,14 @@ Global
 		{029C9603-38B8-44E7-B73F-2CCB814B861D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{029C9603-38B8-44E7-B73F-2CCB814B861D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{029C9603-38B8-44E7-B73F-2CCB814B861D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73A8639E-32D9-43B8-AA09-69A9077B1354}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73A8639E-32D9-43B8-AA09-69A9077B1354}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73A8639E-32D9-43B8-AA09-69A9077B1354}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73A8639E-32D9-43B8-AA09-69A9077B1354}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7756DF0F-775E-4CD0-A291-458ABAC2E000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7756DF0F-775E-4CD0-A291-458ABAC2E000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7756DF0F-775E-4CD0-A291-458ABAC2E000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7756DF0F-775E-4CD0-A291-458ABAC2E000}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

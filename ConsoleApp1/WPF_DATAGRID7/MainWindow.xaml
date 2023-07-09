@@ -1,0 +1,102 @@
+﻿<Window x:Class="WPF_DATAGRID7.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_DATAGRID7"
+        xmlns:GenreEnum="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <local:Songs/>
+    </Window.DataContext>
+    <Window.Resources>
+        <ObjectDataProvider x:Key="ObjDataProvider" ObjectType="{x:Type GenreEnum:Enum}" MethodName="GetNames">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="local:Genre"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+        <Style x:Key="TitleStyle" TargetType="DataGridCell">
+            <Setter Property="Foreground" Value="Red"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsSoundtrack}" Value="true">
+                    <Setter Property="Foreground" Value="Green"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="AltColBackground" TargetType="DataGridCell">
+            <Setter Property="Background" Value="Gainsboro"/>
+            <Setter Property="BorderBrush" Value="Gainsboro"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid Grid.Column="1" x:Name="GRD" FontSize="14" ItemsSource="{Binding SongList, UpdateSourceTrigger=PropertyChanged}" AutoGenerateColumns="False"
+                 GridLinesVisibility="None" AreRowDetailsFrozen="True"
+                  RowEditEnding="DataGrid_RowEditEnding"
+                  PreviewKeyDown="GRD_PreviewKeyDown">
+
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="ID" CellStyle="{StaticResource AltColBackground}">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <WrapPanel>
+                                <Ellipse Height="7" Width="7" Fill="Red" Margin="5 0"/>
+                                <TextBlock Text="{Binding Id}"/>
+                            </WrapPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                    <DataGridTemplateColumn.CellEditingTemplate>
+                        <DataTemplate>
+                            <TextBox Text="{Binding Id, UpdateSourceTrigger=PropertyChanged}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellEditingTemplate>
+                </DataGridTemplateColumn>
+                <!--<DataGridTextColumn Header="ID" Binding="{Binding Id}"/>-->
+                <DataGridTextColumn Header="SONG TITLE" Binding="{Binding Title,UpdateSourceTrigger=PropertyChanged}"
+                                    FontWeight="Thin"/>
+                <DataGridTextColumn Header="ARTIST" Binding="{Binding Artist,UpdateSourceTrigger=PropertyChanged}"
+                                    FontFamily="Segoe Script" CellStyle="{StaticResource AltColBackground}"/>
+                <DataGridCheckBoxColumn Header="SOUNDTRACK" Binding="{Binding IsSoundtrack,UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridTextColumn Header="MOVIE TITLE" Binding="{Binding MovieTitle,UpdateSourceTrigger=PropertyChanged}"
+                                     CellStyle="{StaticResource TitleStyle}"/>
+                <DataGridComboBoxColumn Header="GENRE" 
+                                        TextBinding="{Binding Genre,UpdateSourceTrigger=PropertyChanged}"
+                                        ItemsSource="{Binding Source={StaticResource ObjDataProvider}}"
+                                        CellStyle="{StaticResource AltColBackground}"/>
+                <!--<DataGridTextColumn Header="YEAR" Binding="{Binding ResealeYear, StringFormat=yyyy}"/>-->
+                <DataGridTemplateColumn Header="YEAR">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text ="{Binding ResealeYear, StringFormat=yyyy}" 
+                                       TextDecorations="Underline"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                    <DataGridTemplateColumn.CellEditingTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding ResealeYear,UpdateSourceTrigger=PropertyChanged}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellEditingTemplate>
+                </DataGridTemplateColumn>
+                <DataGridHyperlinkColumn Header="URL" Binding="{Binding URL,UpdateSourceTrigger=PropertyChanged}" CellStyle="{StaticResource AltColBackground}"/>
+            </DataGrid.Columns>
+            <!--<DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="15 0">
+                        <TextBlock Text="{Binding MovieTitle}"/>
+                        <DataGrid ItemsSource="{Binding Artists}" HeadersVisibility="None"/>
+                    </StackPanel>
+                </DataTemplate>
+            </DataGrid.RowDetailsTemplate>-->
+        </DataGrid>
+        <StackPanel x:Name="STKPN">
+            <TextBox FontSize="18"
+                     TextChanged="TextBox_TextChanged"/>
+            <Button Content="ShowDataGrid"
+                    Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
