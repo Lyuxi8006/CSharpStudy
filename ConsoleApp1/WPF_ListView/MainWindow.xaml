@@ -1,0 +1,275 @@
+﻿<Window x:Class="WPF_ListView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_ListView"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <local:Songs/>
+    </Window.DataContext>
+    <Window.Resources>
+        <CollectionViewSource x:Key="CVS" Source="{Binding SongList}">
+            <CollectionViewSource.GroupDescriptions>
+                <PropertyGroupDescription PropertyName="Genre"/>
+            </CollectionViewSource.GroupDescriptions>
+        </CollectionViewSource>
+    </Window.Resources>
+    <Grid>
+        <!--<ListView ItemsSource="{Binding SongList}"
+                  DisplayMemberPath="Title">
+            
+        </ListView>-->
+        <!--<ListView ItemsSource="{Binding SongList}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Id}" Margin="3 0"/>
+                        <TextBlock Text="{Binding Title}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>-->
+        <!--<ListView ItemsSource="{Binding SongList}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="180"/>
+                            <ColumnDefinition Width="150"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Margin="5 0">
+                            <Grid.Background>
+                                <ImageBrush ImageSource="/Assets/images.jpg"/>
+                            </Grid.Background>
+                            <TextBlock Text="{Binding Title}" FontWeight="Medium"/>
+                        </Grid>
+                        <Border Grid.Column="1" BorderBrush="Orange" BorderThickness="1 0 0 0"
+                                Padding="5">
+                            <StackPanel>
+                                <TextBlock Text="{Binding Artist}"/>
+                                <TextBlock Text="{Binding Genre}"/>
+                                <TextBlock Text="{Binding MovieTitle}"/>
+                                <TextBlock Text="{Binding ResealeYear, StringFormat=yyy}"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>-->
+        <!--<ListView ItemsSource="{Binding SongList}" 
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border Height="100" Width="100" BorderBrush="Orange"
+                            BorderThickness="1" CornerRadius="10" Padding="5">
+                        <Grid>
+                            <Grid.Background>
+                                <ImageBrush ImageSource="/Assets/music2.png"/>
+                            </Grid.Background>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="5*"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="{Binding Title}"/>
+                            <TextBlock Grid.Row="1" Text="{Binding Artist}"/>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>-->
+        <!--<ListView ItemsSource="{Binding SongList}">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="ID" DisplayMemberBinding="{Binding Id}"/>
+                        <GridViewColumn Header="TITLE" DisplayMemberBinding="{Binding Title}"/>
+                        <GridViewColumn Header="GENER" DisplayMemberBinding="{Binding Genre}"/>
+                        <GridViewColumn Header="YEAR" DisplayMemberBinding="{Binding ResealeYear, StringFormat=yyyy}"/>
+                        <GridViewColumn Header="ARTIST" DisplayMemberBinding="{Binding Artist}"/>
+                        <GridViewColumn Header="URL" DisplayMemberBinding="{Binding URL}"/>
+                        <GridViewColumn Header="SOUNDTRACK" DisplayMemberBinding="{Binding IsSoundtrack}"/>
+                        <GridViewColumn Header="MOVIE TITLE" DisplayMemberBinding="{Binding MovieTitle}"/>
+                        <GridViewColumn Header="ARTISTS">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <DataGrid ItemsSource="{Binding Artists}"
+                                              DisplayMemberPath="Name"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>-->
+        <!--#region Grouping-1 -->
+        <!--<ListView ItemsSource="{Binding Path=Groups, Source={StaticResource CVS}}">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="GENRE" DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn Header="TITLE">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <ItemsControl ItemsSource="{Binding Items}">
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding Title}"/>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="YEAR">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <ItemsControl ItemsSource="{Binding Items}">
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding ResealeYear, StringFormat=yyyy}"/>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="MOVIE TITLE">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <ItemsControl ItemsSource="{Binding Items}">
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding MovieTitle}"/>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="URL">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <ItemsControl ItemsSource="{Binding Items}">
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding URL}"/>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView.Columns>
+
+                </GridView>
+            </ListView.View>
+        </ListView>-->
+        <!--#endregion-->
+        <!--#region Grouping2 -->
+        <!--<ListView ItemsSource="{Binding Source ={StaticResource CVS}}">
+            <ListView.GroupStyle>
+                <GroupStyle>
+                    <GroupStyle.HeaderTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock Text="{Binding Name}" FontWeight="Medium"/>
+                                <Line X2="1" Stroke="Gray" Stretch="Fill"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </GroupStyle.HeaderTemplate>
+                </GroupStyle>
+            </ListView.GroupStyle>
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="TITLE" DisplayMemberBinding="{Binding Title}"/>
+                        <GridViewColumn Header="ARTIST" DisplayMemberBinding="{Binding Artist}"/>
+                        <GridViewColumn Header="URL" DisplayMemberBinding="{Binding URL}"/>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>-->
+        <!--#endregion-->
+        <!--#region  -->
+        <!--<ListView ItemsSource="{Binding Source={StaticResource CVS}}">
+            <ListView.GroupStyle>
+                <GroupStyle>
+                    <GroupStyle.ContainerStyle>
+                        <Style TargetType="GroupItem">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+                                            <TextBlock Grid.Row="1" FontWeight="Bold" Text="{Binding Name}"/>
+                                            <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Items.Count, StringFormat={}{0}ct}"
+                                                       TextAlignment="Right" FontWeight="Bold"/>
+                                            <StackPanel>
+                                                <Line X2="1" Stretch="Fill" Stroke="Blue"/>
+                                            </StackPanel>
+                                            <ItemsPresenter Grid.Row="0"/>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </GroupStyle.ContainerStyle>
+                </GroupStyle>
+            </ListView.GroupStyle>
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="TITLE" DisplayMemberBinding="{Binding Title}"/>
+                        <GridViewColumn Header="ARTIST" DisplayMemberBinding="{Binding Artist}"/>
+                        <GridViewColumn Header="URL" DisplayMemberBinding="{Binding URL}"/>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>-->
+        <!--#endregion-->
+        <ListView ItemsSource="{Binding Source={StaticResource CVS}}">
+            <ListView.GroupStyle>
+                <GroupStyle>
+                    <GroupStyle.ContainerStyle>
+                        <Style TargetType="GroupItem">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate>
+                                        <Expander Header="{Binding Name}" 
+                                                  IsExpanded="True">
+                                            <ItemsPresenter Grid.Row="0"/>
+                                        </Expander>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </GroupStyle.ContainerStyle>
+                </GroupStyle>
+            </ListView.GroupStyle>
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="TITLE" DisplayMemberBinding="{Binding Title}"/>
+                        <GridViewColumn Header="ARTIST" DisplayMemberBinding="{Binding Artist}"/>
+                        <GridViewColumn Header="URL" DisplayMemberBinding="{Binding URL}"/>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
