@@ -95,11 +95,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_Datagrid", "WPF_Datagri
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_CustomDataGrid", "WPF_CustomDataGrid\WPF_CustomDataGrid.csproj", "{029C9603-38B8-44E7-B73F-2CCB814B861D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_CustomDataGridPart5", "WPF_CustomDataGridPart5\WPF_CustomDataGridPart5.csproj", "{73A8639E-32D9-43B8-AA09-69A9077B1354}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_CustomDataGridPart5", "WPF_CustomDataGridPart5\WPF_CustomDataGridPart5.csproj", "{73A8639E-32D9-43B8-AA09-69A9077B1354}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_DATAGRID7", "WPF_DATAGRID7\WPF_DATAGRID7.csproj", "{7756DF0F-775E-4CD0-A291-458ABAC2E000}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_DATAGRID7", "WPF_DATAGRID7\WPF_DATAGRID7.csproj", "{7756DF0F-775E-4CD0-A291-458ABAC2E000}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_ListView", "WPF_ListView\WPF_ListView.csproj", "{043714D6-7079-45B5-A6D9-872E93A5DE68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_ListView", "WPF_ListView\WPF_ListView.csproj", "{043714D6-7079-45B5-A6D9-872E93A5DE68}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_ControlTemplate", "WPF_ControlTemplate\WPF_ControlTemplate.csproj", "{F8A134CD-DEFC-4B99-9059-1674A1F3529E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_DataTemplate", "WPF_DataTemplate\WPF_DataTemplate.csproj", "{CCC60DD5-B7B3-48C7-9021-069A80AF363A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -303,6 +307,14 @@ Global
 		{043714D6-7079-45B5-A6D9-872E93A5DE68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{043714D6-7079-45B5-A6D9-872E93A5DE68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{043714D6-7079-45B5-A6D9-872E93A5DE68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8A134CD-DEFC-4B99-9059-1674A1F3529E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8A134CD-DEFC-4B99-9059-1674A1F3529E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8A134CD-DEFC-4B99-9059-1674A1F3529E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8A134CD-DEFC-4B99-9059-1674A1F3529E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCC60DD5-B7B3-48C7-9021-069A80AF363A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCC60DD5-B7B3-48C7-9021-069A80AF363A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCC60DD5-B7B3-48C7-9021-069A80AF363A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCC60DD5-B7B3-48C7-9021-069A80AF363A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

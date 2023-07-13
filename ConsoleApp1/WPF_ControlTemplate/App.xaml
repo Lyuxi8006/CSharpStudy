@@ -1,0 +1,48 @@
+﻿<Application x:Class="WPF_ControlTemplate.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WPF_ControlTemplate"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ControlTemplate x:Key="MyDynamicBtnTemplate" TargetType="Button">
+            <Grid Height="100" Width="200" Background="Orange" ShowGridLines="True">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Canvas>
+                    <Ellipse Height="20" Width="20" Fill="Blue" Canvas.Top="50"
+                                         Canvas.Left="15"/>
+                    <Ellipse Height="20" Width="20" Fill="Blue" Canvas.Top="33" Canvas.Left="25"/>
+                    <Ellipse Height="20" Width="20" Fill="Blue" Canvas.Top="50" Canvas.Left="35"/>
+                </Canvas>
+                <!--<TextBlock Text="Button" FontSize="20" Grid.Column="1" HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"/>-->
+                <ContentPresenter Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+        </ControlTemplate>
+        <Style TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Height="100" Width="200" Background="Orange" ShowGridLines="True">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Canvas>
+                                <Ellipse Height="20" Width="20" Fill="Black" Canvas.Top="50"
+                                             Canvas.Left="15"/>
+                                <Ellipse Height="20" Width="20" Fill="Black" Canvas.Top="33" Canvas.Left="25"/>
+                                <Ellipse Height="20" Width="20" Fill="Black" Canvas.Top="50" Canvas.Left="35"/>
+                            </Canvas>
+                            <!--<TextBlock Text="Button" FontSize="20" Grid.Column="1" HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"/>-->
+                            <ContentPresenter Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Application.Resources>
+</Application>
