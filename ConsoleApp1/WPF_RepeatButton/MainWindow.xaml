@@ -1,0 +1,78 @@
+﻿<Window x:Class="WPF_RepeatButton.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_RepeatButton"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Background="Beige">
+            <TextBlock Text="RepeatButton" FontSize="55"/>
+            <TextBlock Text="Fires the Click Event repeatedly so long as pressed"
+                       FontSize="22"/>
+            <TextBlock Text="Properties" FontSize="55"/>
+            <TextBlock Text="-Delay" FontSize="22"/>
+            <TextBlock Text="-Interval" FontSize="22"/>
+
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <RepeatButton x:Name="btnIncrease" Content="INCREASE"
+                          FontSize="22"
+                          Click="btnIncrease_Click"
+                          Delay="0" Interval="1000"/>
+            <TextBox x:Name="TBX" FontSize="28" 
+                     TextAlignment="Center"
+                     Text="1"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <RepeatButton x:Name="btnIncreaseHour"
+                              Content="+" FontSize="24"
+                              Click="btnIncreaseHour_Click"
+                              Interval="100"/>
+                <RepeatButton x:Name="btnDecreaseHour"
+                              Content="-" FontSize="24"
+                              Grid.Row="1"
+                              Click="btnDecreaseHour_Click"
+                              Interval="100"/>
+                <RepeatButton x:Name="btnIncreaseMins"
+                              Content="+" FontSize="24"
+                              Grid.Column="2"
+                              Click="btnIncreaseMins_Click"
+                              Interval="100"/>
+                <RepeatButton x:Name="btnDecreaseMins"
+                              Content="-" FontSize="24"
+                              Grid.Row="1" Grid.Column="2"
+                              Click="btnDecreaseMins_Click"
+                              Interval="100"/>
+                <TextBox x:Name="tbxTimePicker"
+                         Text="1234"
+                         FontSize="42"
+                         Foreground="Blue"
+                         Grid.Column="1"
+                         Grid.RowSpan="2"
+                         TextAlignment="Center"/>
+            </Grid>
+            <RepeatButton x:Name="btnExpand" 
+                              Content="Expand"
+                              FontSize="24"
+                          Click="btnExpand_Click"/>
+            <Line x:Name="MyLine" Margin="0 5"
+                  X1="1" Stroke="Red" Fill="Blue" 
+                  StrokeThickness="10"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

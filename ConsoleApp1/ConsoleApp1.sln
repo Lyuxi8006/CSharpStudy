@@ -111,11 +111,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_TreeView02", "WPF_TreeV
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_TreeView3", "WPF_TreeView3\WPF_TreeView3.csproj", "{31BFCDC6-A842-4CEA-8E42-27ECCB629C4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_MoveShapeWithMouse", "WPF_MoveShapeWithMouse\WPF_MoveShapeWithMouse.csproj", "{CC408BE8-29BF-42A2-9322-6E3610A93D70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_MoveShapeWithMouse", "WPF_MoveShapeWithMouse\WPF_MoveShapeWithMouse.csproj", "{CC408BE8-29BF-42A2-9322-6E3610A93D70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_DrawPolygons", "WPF_DrawPolygons\WPF_DrawPolygons.csproj", "{C3033D5F-C301-4B90-878D-298EB653756B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_DrawPolygons", "WPF_DrawPolygons\WPF_DrawPolygons.csproj", "{C3033D5F-C301-4B90-878D-298EB653756B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_GeometryGroup", "WPF_GeometryGroup\WPF_GeometryGroup.csproj", "{6127D567-EAD4-4273-979A-11EA4EA4361D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_GeometryGroup", "WPF_GeometryGroup\WPF_GeometryGroup.csproj", "{6127D567-EAD4-4273-979A-11EA4EA4361D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_ToggleButton", "WPF_ToggleButton\WPF_ToggleButton.csproj", "{8F9361DA-3A54-4CD2-A87F-FCC2DB090678}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_RepeatButton", "WPF_RepeatButton\WPF_RepeatButton.csproj", "{7EC5B3B3-1939-4425-B752-5E67586829C9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_MyCustomToggleBtn", "WPF_MyCustomToggleBtn\WPF_MyCustomToggleBtn.csproj", "{662D8C1F-308D-44D2-A9C0-2EC25FE90088}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_CustomControls", "WPF_CustomControls\WPF_CustomControls.csproj", "{2388FC94-D492-411C-A54B-D2BB23D9EF55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_AnalogClock", "WPF_AnalogClock\WPF_AnalogClock.csproj", "{FD171B41-FD54-4183-828B-282A14901C28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_MyCustomBarChart", "WPF_MyCustomBarChart\WPF_MyCustomBarChart.csproj", "{9FF69FBA-3352-4D6C-8537-07A78457BB2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -351,6 +363,30 @@ Global
 		{6127D567-EAD4-4273-979A-11EA4EA4361D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6127D567-EAD4-4273-979A-11EA4EA4361D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6127D567-EAD4-4273-979A-11EA4EA4361D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F9361DA-3A54-4CD2-A87F-FCC2DB090678}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F9361DA-3A54-4CD2-A87F-FCC2DB090678}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F9361DA-3A54-4CD2-A87F-FCC2DB090678}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F9361DA-3A54-4CD2-A87F-FCC2DB090678}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EC5B3B3-1939-4425-B752-5E67586829C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EC5B3B3-1939-4425-B752-5E67586829C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EC5B3B3-1939-4425-B752-5E67586829C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EC5B3B3-1939-4425-B752-5E67586829C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{662D8C1F-308D-44D2-A9C0-2EC25FE90088}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{662D8C1F-308D-44D2-A9C0-2EC25FE90088}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{662D8C1F-308D-44D2-A9C0-2EC25FE90088}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{662D8C1F-308D-44D2-A9C0-2EC25FE90088}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2388FC94-D492-411C-A54B-D2BB23D9EF55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2388FC94-D492-411C-A54B-D2BB23D9EF55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2388FC94-D492-411C-A54B-D2BB23D9EF55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2388FC94-D492-411C-A54B-D2BB23D9EF55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD171B41-FD54-4183-828B-282A14901C28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD171B41-FD54-4183-828B-282A14901C28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD171B41-FD54-4183-828B-282A14901C28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD171B41-FD54-4183-828B-282A14901C28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FF69FBA-3352-4D6C-8537-07A78457BB2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FF69FBA-3352-4D6C-8537-07A78457BB2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FF69FBA-3352-4D6C-8537-07A78457BB2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FF69FBA-3352-4D6C-8537-07A78457BB2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,34 @@
+﻿<Window x:Class="WPF_CustomControls.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_CustomControls"
+        xmlns:MyCustomToggle="clr-namespace:WPF_MyCustomToggleBtn;assembly=WPF_MyCustomToggleBtn"
+        xmlns:MyBarChart="clr-namespace:WPF_MyCustomBarChart;assembly=WPF_MyCustomBarChart"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DockPanel>
+            <MyCustomToggle:CustomControl1 Background="LightGray"
+                                           MinHeight="40" MaxHeight="50"
+                                           Foreground="White"/>
+        </DockPanel>
+        <StackPanel Grid.Column ="1">
+            <MyBarChart:CustomControl1>
+                <MyBarChart:CustomControl1.Values>
+                    <system:Double>45</system:Double>
+                    <system:Double>55</system:Double>
+                    <system:Double>66</system:Double>
+                    <system:Double>33</system:Double>
+                    <system:Double>77</system:Double>
+                </MyBarChart:CustomControl1.Values>
+            </MyBarChart:CustomControl1>
+        </StackPanel>
+    </Grid>
+</Window>

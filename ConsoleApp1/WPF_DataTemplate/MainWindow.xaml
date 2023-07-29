@@ -8,6 +8,7 @@
         Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <local:Products x:Key="MyProds"/>
+        <local:MyDeataTemplateSelector x:Key="MyDTSelector"/>
         <!--#region Implicit DataTemplate -->
         <DataTemplate DataType="{x:Type local:Product}">
             <StackPanel Orientation="Horizontal">
@@ -23,7 +24,8 @@
         <!--#endregion-->
         <!--#region DataTemplate w/DataTrigger -->
         <DataTemplate x:Key="MyProdDT" DataType="{x:Type local:Product}">
-            <StackPanel Orientation="Horizontal" Background="Yellow">
+            <StackPanel Orientation="Horizontal" Background="Yellow"
+                        HorizontalAlignment="Stretch">
                 <Border Background="Red" BorderThickness="1"
                         CornerRadius="45" Height="25" Width="25">
                     <TextBlock Text="{Binding Id}"
@@ -37,12 +39,39 @@
                            FontSize="20" Margin="5 0"
                            VerticalAlignment="Center"/>
                 <TextBlock x:Name="TBLK" Text="SALE" HorizontalAlignment="Right"
-                           FontSize="28" Background="Red"
+                           FontSize="28" Background="Black"
                            Foreground="White" FontWeight="Black"
-                           Visibility="Hidden"/>
+                           Visibility="Collapsed"/>
             </StackPanel>
             <DataTemplate.Triggers>
-                <DataTrigger Binding="{Binding Id}" Value="1">
+                <DataTrigger Binding="{Binding Dep}" Value="Dairy">
+                    <Setter TargetName="TBLK" Property="Visibility"
+                            Value="Visible"/>
+                </DataTrigger>
+            </DataTemplate.Triggers>
+        </DataTemplate>
+        <DataTemplate x:Key="MyProdDT2" DataType="{x:Type local:Product}">
+            <StackPanel Orientation="Horizontal" Background="Yellow"
+                        HorizontalAlignment="Stretch">
+                <Border Background="Red" BorderThickness="1"
+                        CornerRadius="45" Height="25" Width="25">
+                    <TextBlock Text="{Binding Id}"
+                               FontSize="20"
+                               TextAlignment="Center"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Margin="3"/>
+                </Border>
+                <TextBlock Text="{Binding ProdName}" Width="145" 
+                           FontSize="20" Margin="5 0"
+                           VerticalAlignment="Center"/>
+                <TextBlock x:Name="TBLK" Text="SALE" HorizontalAlignment="Right"
+                           FontSize="28" Background="Blue"
+                           Foreground="White" FontWeight="Black"
+                           Visibility="Collapsed"/>
+            </StackPanel>
+            <DataTemplate.Triggers>
+                <DataTrigger Binding="{Binding Dep}" Value="Soda">
                     <Setter TargetName="TBLK" Property="Visibility"
                             Value="Visible"/>
                 </DataTrigger>
@@ -171,7 +200,7 @@
         </StackPanel>
         <StackPanel Grid.Column="2">
             <ListView ItemsSource="{Binding Source={StaticResource MyProds}, Path=MyProducts}"
-                      ItemTemplate="{Binding Source={StaticResource MyProdDTWithEnum}}"
+                      ItemTemplateSelector="{Binding Source={StaticResource MyDTSelector}}"
                       HorizontalContentAlignment="Stretch"/>
         </StackPanel>
     </Grid>
