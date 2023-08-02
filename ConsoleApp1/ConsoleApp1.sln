@@ -125,9 +125,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_MyCustomToggleBtn", "WP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_CustomControls", "WPF_CustomControls\WPF_CustomControls.csproj", "{2388FC94-D492-411C-A54B-D2BB23D9EF55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_AnalogClock", "WPF_AnalogClock\WPF_AnalogClock.csproj", "{FD171B41-FD54-4183-828B-282A14901C28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_AnalogClock", "WPF_AnalogClock\WPF_AnalogClock.csproj", "{FD171B41-FD54-4183-828B-282A14901C28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_MyCustomBarChart", "WPF_MyCustomBarChart\WPF_MyCustomBarChart.csproj", "{9FF69FBA-3352-4D6C-8537-07A78457BB2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_MyCustomBarChart", "WPF_MyCustomBarChart\WPF_MyCustomBarChart.csproj", "{9FF69FBA-3352-4D6C-8537-07A78457BB2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_UserControl", "WPF_UserControl\WPF_UserControl.csproj", "{4229C5E1-D85E-4118-8B82-9B6BE62FFDDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -387,6 +389,10 @@ Global
 		{9FF69FBA-3352-4D6C-8537-07A78457BB2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FF69FBA-3352-4D6C-8537-07A78457BB2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FF69FBA-3352-4D6C-8537-07A78457BB2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4229C5E1-D85E-4118-8B82-9B6BE62FFDDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4229C5E1-D85E-4118-8B82-9B6BE62FFDDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4229C5E1-D85E-4118-8B82-9B6BE62FFDDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4229C5E1-D85E-4118-8B82-9B6BE62FFDDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
