@@ -1,0 +1,59 @@
+﻿<Window x:Class="FixedDocument.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FixedDocument"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition  Width=".2*"/>
+            </Grid.ColumnDefinitions>
+            <DocumentViewer>
+                <FixedDocument x:Name="FxDoc">
+                    <PageContent>
+                        <FixedPage x:Name="fxpg1">
+                            <TextBlock Text="Fixed Document" 
+                           FontSize="55" 
+                           FixedPage.Top="500"
+                           FixedPage.Left="250"/>
+                            <Image Source="/Assets/book_img.jpg"/>
+                            <TextBlock Text="{Binding ElementName=fxpg1,
+                    Path=Height}" FontSize="32"/>
+                            <TextBlock Text="{Binding ElementName=fxpg1,
+                    Path=Width}" FontSize="32"
+                           FixedPage.Top="40"/>
+                            <TextBlock Text="FixedDocument is designed for  (WYSIWYG) applications where the document layout is defined and controlled by the application for rendering to the highest accuracy of the display or print device."
+                           FixedPage.Top="50"
+                           TextWrapping="Wrap"/>
+                        </FixedPage>
+                    </PageContent>
+                    <PageContent>
+                        <FixedPage x:Name="fxpg2" Margin="96">
+                            <Grid Width="{Binding ElementName=fxpg2, Path=Width}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="/Assets/juice.png"/>
+                                <TextBlock Text="Fixed Document"
+                           FontSize="95" Foreground="Purple"
+                               Grid.Column="0"
+                               Grid.ColumnSpan="2"/>
+                                <TextBlock Text="FixedDocument is designed for  (WYSIWYG) applications where the document layout is defined and controlled by the application for rendering to the highest accuracy of the display or print device."
+                           TextWrapping="Wrap"
+                               Margin="0,200"
+                             Grid.ColumnSpan="2"  />
+                            </Grid>
+                        </FixedPage>
+                    </PageContent>
+                </FixedDocument>
+            </DocumentViewer>
+            <Image Grid.Column="1" Source="/Assets/music2.png"/>
+        </Grid>
+
+    </Grid>
+</Window>

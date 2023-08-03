@@ -1,0 +1,141 @@
+﻿<Window x:Class="FlowDocument.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FlowDocument"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <x:Array Type="{x:Type local:Person}" x:Key="PERSON">
+            <local:Person id="1" name="Joe"/>
+            <local:Person id="2" name="Jane"/>
+        </x:Array>
+    </Window.Resources>
+    <Grid>
+        <FlowDocumentReader>
+            <FlowDocument>
+                <Paragraph FontFamily="Palatino Linotype" >
+                    2
+                    <Run Typography.Variants="Superscript" Text="3"/>
+                    <LineBreak/>
+                    H
+                    <Run Typography.Variants="Inferior" Text="2"/> O
+                    <LineBreak/>
+                    Footnote
+                    <Run Typography.Variants="Subscript" Text="4"/>
+                    <LineBreak/> 14
+                    <Run Typography.Variants="Superscript" Text="th"/> year
+                    <LineBreak/>
+                    <Run Typography.Fraction="Stacked" Text="1/2" FontSize="22"/> S
+                    <Run Typography.Variants="Inferior" Text="tacked Or Slashed"/>
+                    <Run Typography.Fraction="Slashed" Text="2/3"/>
+                </Paragraph>
+                <Paragraph Background="Lavender" FontStyle="Oblique">
+                    Those who would give up essential
+                    <Bold>Liberty</Bold> , to purchase a little temporary Safety, deserve neither Liberty nor Safety ~Benjamin Franklin
+                </Paragraph>
+                <Paragraph TextIndent="20">
+                    <Span Background="Yellow">Free speech</Span> is meant to protect unpopular speech. Popular speech, by definition, needs no protection~Neal Boortz
+                </Paragraph>
+                <Paragraph>
+                    <Span FontSize="26">T</Span> o be, or not to be, that is the question~William Shakespeare
+                </Paragraph>
+                <Paragraph KeepTogether="True" >
+                    <Figure Width=".5Column" Background="beige" 
+                            HorizontalAnchor="ColumnLeft" 
+                            VerticalAnchor="ParagraphTop">
+                        <Paragraph>
+                            Figure is a good place to put standalone content where you want to control the size and positioning, and are confident that the content will fit in the specified size.
+                        </Paragraph>
+                    </Figure>
+                    A flow document is designed to "reflow content" depending on window size, device resolution, and other environment variables. In addition, flow documents have a number of built in features including search, viewing modes that optimize readability, and the ability to change the size and appearance of fonts. Flow Documents are best utilized when ease of reading is the primary document consumption scenario. In contrast, Fixed Documents are designed to have a static presentation.~MSDN
+                </Paragraph>
+                <Section Background="Beige">
+                    <Paragraph>Flow Document Types:</Paragraph>
+                    <List MarkerStyle="LowerRoman">
+                        <ListItem>
+                            <Paragraph>FlowDocumentPageViewer</Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>FlowDocumentScrollViewer</Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>FlowDocumentReader</Paragraph>
+                        </ListItem>
+                        <ListItem>
+                            <Paragraph>RichTextBox</Paragraph>
+                        </ListItem>
+                    </List>
+                </Section>
+                <BlockUIContainer>
+                    <StackPanel Orientation="Horizontal">
+                        <Ellipse Height="15" Width="15" Fill="Red"/>
+                        <Ellipse Height="15" Width="15" Fill="Purple"/>
+                        <Ellipse Height="15" Width="15" Fill="Green"/>
+                    </StackPanel>
+                </BlockUIContainer>
+                <Table>
+                    <TableRowGroup>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>Fruits</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>Pears</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>Apples</Paragraph>
+                            </TableCell>
+
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>Jan</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>10tn</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>20tn</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                    </TableRowGroup>
+                </Table>
+                <Paragraph>
+                    <Image Source="/Assets/cherry.png"/>
+                </Paragraph>
+                <Section>
+                    <Paragraph>People</Paragraph>
+                    <Paragraph>
+                        <ListView ItemsSource="{Binding Source={StaticResource PERSON}}" Width="400">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding id}" Width="100"/>
+                                    <GridViewColumn Header="NAME" DisplayMemberBinding="{Binding name}" Width="200"/>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </Paragraph>
+                </Section>
+                <Paragraph>
+                    Figure:
+Can be positioned: You can set its horizontal and vertical anchors to dock it relative to the page, content, column or paragraph. You can also use its HorizontalOffset and VerticalOffset properties to specify arbitrary offsets.
+Is sizable to more than one column: You can set Figure height and width to multiples of page, content or column height or width. Note that in the case of page and content, multiples greater than 1 are not allowed. For example, you can set the width of a Figure to be "0.5 page" or "0.25 content" or "2 Column". You can also set height and width to absolute pixel values.
+Does not paginate: If the content inside a Figure does not fit inside the Figure, it will render whatever content does fit and the remaining content is lost
+                    <Floater HorizontalAlignment="Center">
+                        <Paragraph>
+                            <Image Width="100" Source="/Assets/cow.png"/>
+                        </Paragraph>
+                    </Floater>
+                    Floater:
+Cannot be positioned and will render wherever space can be made available for it. 
+You cannot set the offset or anchor a Floater.
+Cannot be sized to more than one column: By default,
+                </Paragraph>
+
+            </FlowDocument>
+
+        </FlowDocumentReader>
+    </Grid>
+</Window>
