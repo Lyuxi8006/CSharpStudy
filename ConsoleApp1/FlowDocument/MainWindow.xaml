@@ -12,9 +12,125 @@
             <local:Person id="2" name="Jane"/>
         </x:Array>
     </Window.Resources>
-    <Grid>
-        <FlowDocumentReader>
-            <FlowDocument>
+    <DockPanel>
+        <WrapPanel  DockPanel.Dock="Top" Height="30">
+            <ToolBar>
+                <Button Command="ApplicationCommands.Copy" ToolTip="Copy">
+                    Copy
+                </Button>
+                <Button Command="ApplicationCommands.Paste" ToolTip="Paste">Paste</Button>
+                <Button Command="ApplicationCommands.Cut" ToolTip="Cut">Cut</Button>
+                <Button Command="ApplicationCommands.Undo" ToolTip="Undo">Undo</Button>
+                <Button Command="ApplicationCommands.Redo" ToolTip="Redo">Redo</Button>
+            </ToolBar>
+            <ToolBar>
+                <Button Command="EditingCommands.ToggleBold" 
+                      FontWeight="Bold"  ToolTip="Bold">B</Button>
+                <Button Command="EditingCommands.ToggleUnderline">
+                    <TextBlock Text="U" TextDecorations="Underline"
+                               FontWeight="Bold"/>
+                </Button>
+                <Button Command="EditingCommands.ToggleItalic" 
+                      FontWeight="Bold" FontStyle="Italic" 
+                        ToolTip="Italic">I</Button>
+                <Button Command="EditingCommands.ToggleBullets" ToolTip="Bullet List">
+                    Bullets
+                </Button>
+                <Button Command="EditingCommands.ToggleNumbering" ToolTip="Number List">
+                    Numbers
+                </Button>
+                <Button Command="EditingCommands.IncreaseFontSize" ToolTip="Increase Fontsize">
+                    Increase Fontsize
+                </Button>
+                <Button Command="EditingCommands.DecreaseFontSize" ToolTip="Decrease Fontsize">
+                    Decrease Fontsize
+                </Button>
+            </ToolBar>
+            <Button x:Name="SaveTXT" Click="SaveTXT_Click">SaveAsTXT</Button>
+            <Button x:Name="SaveXAML" Click="SaveXAML_Click">SaveAsXAML</Button>
+            <Button x:Name="SaveRTF" Click="SaveRTF_Click" >SaveAsRTF</Button>
+        </WrapPanel>
+        <RichTextBox x:Name="RichTBX" SpellCheck.IsEnabled="True">
+            <FlowDocument Name="FlowDoc" ColumnRuleBrush="Blue"
+                          ColumnWidth="816"
+                          PageHeight="1056">
+                <Table>
+                    <TableRowGroup>
+                        <TableRow Background="LightGray">
+                            <TableCell>
+                                <Paragraph/>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>Real-time
+                                    <LineBreak/> Spellchecking
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>Context Menu</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>Formatting commands
+                                    <LineBreak/> like ToggleBold (Ctr+B)
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>FlowDocument content like images, paragraphs, tables, etc.</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow Background="WhiteSmoke" >
+                            <TableCell>
+                                <Paragraph>TextBox</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>Yes</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>Yes</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>No</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>No</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow Background="WhiteSmoke" >
+                            <TableCell>
+                                <Paragraph>RichTextBox</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>Yes</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>Yes</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>Yes</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>Yes</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                    </TableRowGroup>
+                </Table>
+                <Paragraph>
+                    Specifically, the content edited in a RichTextBox is flow content. Flow content can contain many types of elements including formatted text, images, lists, and tables.
+                    In order to contain flow content, a RichTextBox hosts a FlowDocument object which in turn contains the editable content.
+                </Paragraph>
+                <List>
+                    <ListItem>
+                        <Paragraph>Real-time Spell Checking</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>Context Menu</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>Editing Commands</Paragraph>
+                    </ListItem>
+                </List>
+                <BlockUIContainer>
+                    <Button Content="Print PDF" Click="Button_Click"/>
+                </BlockUIContainer>
                 <Paragraph FontFamily="Palatino Linotype" >
                     2
                     <Run Typography.Variants="Superscript" Text="3"/>
@@ -136,6 +252,6 @@ Cannot be sized to more than one column: By default,
 
             </FlowDocument>
 
-        </FlowDocumentReader>
-    </Grid>
+        </RichTextBox>
+    </DockPanel>
 </Window>
